@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" media="screen">
+		
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/todo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	
+		
+</head>
+<body>
+	
+	<div id="header" class="clearfix">
+		
+		<div id="logo" class="pull-left">  <!-- pull-left ＝ 靠左 -->
+			<a href="#">
+				<img src="image/6374787-big2.jpg" alt="logo">
+			</a>
+		</div>
+		
+		<nav class="pull-right">  <!-- pull-right ＝ 靠右 -->
+			<ul class="nav nav-pills text-uppercase scroll">  <!-- text-uppercase = 文字大寫 -->
+			  <li class="active"><a href="#my">Home</a></li>
+			  <li><a href="#tools">Tools</a></li>
+			  <li><a href="#image">Image</a></li>
+			  <li><a href="#footer">Messages</a></li>
+			</ul>		
+		</nav>
+	</div>
+	
+	<div class="header clearfix">
+		<div class="container">
+			<h1 class="pull-left">Welcome</h1>
+		</div>
+	</div>
+	
+	<section id="my">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-sm-5">
+					<!-- carousel indicators -->
+					<div id="myPhoto" class="carousel slide" data-interval="5000" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#myPhoto" data-slide-to="0" class="active"></li>
+							<li data-target="#myPhoto" data-slide-to="1"></li>
+							<li data-target="#myPhoto" data-slide-to="2"></li>
+						</ol>
+						<!-- wrapper for carousel items -->
+						<div class="carousel-inner">  
+							<div class="item active">
+								<img src="image/17264549_1618338251515245_3120894335091874283_n.jpg" style="display:block; margin:auto;" alt="First Slide">
+							</div>
+							<div class="item">
+								<img src="image/17309243_1618338241515246_8816585604456057713_n.jpg" style="display:block; margin:auto;" alt="Second Slide">
+							</div>
+							<div class="item">				
+								<img src="image/17361745_1618338258181911_8179730562280895094_n.jpg" alt="Third Slide">
+							</div>
+						</div>
+						<!-- carousel controls -->
+						<a class="carousel-control left" href="#myPhoto" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="carousel-control right" href="#myPhoto" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				
+				<div class="col-sm-7">
+					<h2>自傳</h2>
+					<p>您好，敝姓張  名紘綸，現年28歲，目前居住在宜蘭縣蘇澳鎮。我的個性正面而積極，在大學時期有學過C與JAVA等程式，從學校畢業後，就入伍完成國民應盡的義務。我明白這是一段必經的過程，於是我以很坦然的態度面對這段歷程，現在回憶起在馬祖的生活,還真是人生中一個難忘的回憶。</p>
+					<p>退伍後，先在和平火力發電廠上班，因家庭因素辭職後回到蘇澳的聖戈班工作，最後還是決定想回到資訊產業，在去年十月多辭職，接著報名資策會學習有關IOS的課程，雖然只有短短的兩個月多，學到的也只是基礎，希望藉由踏出的這一步成為回到資訊產業的契機，現階段求職的期間也利用"網頁基礎15天"等線上課程來進行自修，希望對於前端工程師的部分都能有初步的了解，而非只局限於IOS的部分。</p>
+					<p>在經驗方面雖然出社會也已經五年左右了，但對於接下來的新挑戰，依然會抱持著積極的正面態度，期待貴公司給予我機會，希望能有與貴公司一起成長的未來。</p>
+				</div>				
+			</div>
+		</div>
+	</section>
+	
+	<hr />
+	
+	<section id="tools">
+		<div class="container">
+			<div class="heading-title text-center text-uppercase">  <!-- text-center = 文字置中 -->
+				<h3>Todo list &amp; Tab</h3>  
+				<p>just for fun to try.</p>
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="col-sm-6">  <!--todo list -->
+					<div class="row">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-10">
+							<div id="todo-list">
+								<li>
+									<input type="checkbox" />
+									<span class="content">Button can create</span>
+									<input type="text" value="Button can create" />
+									<button class="btn" data-action="delete">x</button>
+								</li>
+								<li>
+									<input type="checkbox" />
+									<span class="content">hover todo item can show delete item</span>
+									<input type="text" value="hover todo item can show delete item" />
+									<button class="btn" data-action="delete">x</button>
+								</li>
+								<li>
+									<input type="checkbox" />
+									<span class="content">Double click to revise</span>
+									<input type="text" value="Double click to revise" />
+									<button class="btn" data-action="delete">x</button>
+								</li>
+							</div>
+							<button id="add-todo" class="btn btn-primary pull-right">+</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6">  <!-- tab -->
+					<div class="row">
+						<div class="col-sm-10">
+							<ul class="nav nav-tabs">
+							  <li class="active"><a data-toggle="tab" href="#section">學歷</a></li>
+							  <li><a data-toggle="tab" href="#section1">經歷</a></li>
+							  <li class="dropdown">
+							  	<a data-toggle="dropdown" class="dropdown-toggle" href="#">作品 <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a data-toggle="tab" href="#dropdown1">IOS作品</a></li>
+									<li><a data-toggle="tab" href="#dropdown2">HTML&amp;CSS</a></li>
+								</ul>
+							  </li>
+							</ul>
+					
+							<div class="tab-content">
+								<div id="section" class="tab-pane fade in active">
+									<h3>最高學歷</h3>
+									<p class="black"><i class="icon-book"></i>國立高雄海洋科技大學(台灣)</p>
+									<p class="space">資訊管理系(資訊管理相關)大學</p>
+									<p class="space">2006／09～2010／06(畢業)</p>
+
+								</div>
+								<div id="section1" class="tab-pane fade">
+									<h3>經歷</h3>
+									<p class="black"><i class="icon-shopping-bag"></i>聖戈班先進材料股份有限公司 2014／05～2016／10</p>
+									<p class="space">職稱：作業員</p>
+									<p class="black"><i class="icon-shopping-bag"></i>和平電力股份有限公司 2011／10～2014／03</p>
+									<p class="space">職稱：運轉操作員</p>
+
+								</div>
+								<div id="dropdown1" class="tab-pane fade">
+									<h3>IOS作品</h3>
+									<a href="https://medium.com/@iamallenchang/好久沒寫啦-課程也結束一個月多-5a2c4cdaa3bb#.f138gyslh">https://medium.com/@iamallenchang/好久沒寫啦-課程也結束一個月多-5a2c4cdaa3bb#.f138gyslh</a>
+									<br>
+									<a href="https://medium.com/@iamallenchang/news-api-cfa0f60accc1">https://medium.com/@iamallenchang/news-api-cfa0f60accc1</a>
+								</div>
+								<div id="dropdown2" class="tab-pane fade">
+									<h3>HTML&amp;CSS  Practice</h3>
+									<p class="nop">HTML Practice</p>
+									<a href="https://medium.com/@iamallenchang/html-practice-c120f94635ed ">https://medium.com/@iamallenchang/html-practice-c120f94635ed </a>
+									<p class="nop">CSS Practice</p>
+									<a href="https://medium.com/@iamallenchang/css-practice-d0da906030a7">https://medium.com/@iamallenchang/css-practice-d0da906030a7</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2"></div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	
+	<section class="no-padding">
+		<div class="imagefix">
+			<div class="container">
+				<h1 class="title text-uppercase">thank you</h1>
+				<h3 class="subtitle text-uppercase">to watch my design</h3>
+			</div>
+		</div>
+	</section>
+
+	<section id="image">
+		<div class="container categories">
+			<div class="row text-capitalize">
+				<div class="col-sm-6 category tran">
+		            <img src="image/cloud.jpg" alt="category" />
+		            <span class="title black">scrollspy<br />for test</span>
+				</div>
+				<div class="col-sm-6 category tran">
+					<img src="image/cloud.jpg" alt="category" />
+					<span class="title black">scrollspy<br />for test</span>
+				</div>
+				<div class="col-sm-4 category">
+					<div class="thumbnails">
+						<img src="image/sunflower.jpg" alt="category" />
+						<div class="cover text-center">
+						<h3 class="branding">transition animate for test</h3>
+		  				  <div class="social-media">
+		  				  	<ul class="clearfix">
+		  				  		<li><a href="javascript:void(0)"><i class="icon-facebook"></i></a></li>
+		  				  		<li><a href="javascript:void(0)"><i class="icon-twitter"></i></a></li>
+		  				  		<li><a href="javascript:void(0)"><i class="icon-gplus"></i></a></li>
+		  				  	</ul>
+		  				  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 category">
+					<div class="thumbnails">
+						<img src="image/sunflower.jpg" alt="category" />
+						<div class="cover text-center">
+							<h3 class="branding">transition animate for test</h3>
+							<div class="social-media">
+								<ul class="clearfix">
+									<li><a href="javascript:void(0)"><i class="icon-facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="icon-twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="icon-gplus"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 category">
+					<div class="thumbnails">
+						<img src="image/sunflower.jpg" alt="category" />
+						<div class="cover text-center">
+							<h3 class="branding">transition animate for test</h3>
+							<div class="social-media">
+								<ul class="clearfix">
+									<li><a href="javascript:void(0)"><i class="icon-facebook"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="icon-twitter"></i></a></li>
+									<li><a href="javascript:void(0)"><i class="icon-gplus"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+	</section>  
+	
+	<div id="footer">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">  <!-- avatar -->
+					<div class="row">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-10">					
+							<h3 class="text-uppercase">speak by bubble box</h3>
+							<div class="quote">
+								<div class="bubble comment">
+									<p>希望此網頁對於我應徵前端工程師有所幫助，雖然目前是應徵前端工程師，但希望在未來的工作上所能學習到的，不只前端工程師的部分而已，如果您願意給予本人認識貴公司的機會，請透過人力銀行上的聯絡方式通知我，再次感謝您花時間觀看我的作品。
+									</p>
+									<div class="triangle"></div>
+								</div>
+						
+								<div class="row">
+									<div class="col-sm-2">
+										<img class="img-circle" src="image/avatar.jpg" alt="avatar">  <!-- img-circle = image做圓角 -->
+									</div>
+									<div class="testimonial-meta col-sm-10 text-uppercase">
+										<h4 class="name">allen chang</h4>
+										<div class="title">engineer</div>								
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+				
+					</div>
+					<div class="col-sm-6">  <!-- form -->
+						<div class="row">
+							<div class="col-sm-10">
+								<h3 class="title text-uppercase">have you a question?</h3>
+								<from>
+									<div class="form-group">
+										<label for="inputName">Name</label>
+										<input type="text" class="form-control" id="inputName" placeholder="Your Name">
+									</div>
+									<div class="form-group">
+										<label for="inputEmail">Email</label>
+										<input type="email" class="form-control" id="inputEmail" placeholder="test@gmail.com">
+									</div>
+									<div class="form-group">
+										<label for="inputComments">Comments</label>
+										<textarea name="comments" class="form-control" id="inputComments"></textarea>
+									</div>
+									
+									<!-- Button HTML (to Trigger Modal) -->
+									<a href="#myModal" class="btn btn-primary pull-right" data-toggle="modal">Send Message</a>  
+								</from>
+								
+								<!-- Modal HTML -->
+							    <div id="myModal" class="modal fade">  
+							        <div class="modal-dialog">
+							            <div class="modal-content">
+							                <div class="modal-header">
+							                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+							                    <h4 class="modal-title">Model Test Button</h4>
+							                </div>
+							                <div class="modal-body">
+							                    <p>Sorry! This button just for test model function. <br> save changes button no any function.</p>
+							                    <p class="text-warning"><small>You can select Close or X</small></p>
+							                </div>
+							                <div class="modal-footer">
+							                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							                    <button type="button" class="btn btn-primary">Save changes</button>
+							                </div>
+							            </div>
+							        </div>
+							    </div>
+							</div>
+							<div class="col-sm-2"></div>
+						</div>
+                     </div>    
+				</div>
+			</div>
+		
+			<div class="bottom">  <!-- copyright & social-media -->
+				<div class="container clearfix">
+					<div class="copyright pull-left text-capitalize">
+						&copy; 2017 by <a href="mailto:iamallenchang@gmail.com">allenchang</a> | all rights reserved
+					</div>
+				
+					<div class="social-media pull-right">
+						<ul class="list-inline text-center">
+							<li><a href="javascript:void(0)"><i class="icon-facebook"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="icon-twitter"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="icon-dribbble"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="icon-gplus"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="icon-behance"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	
+	<a href="#header" id="go-top" class="text-center"><i class="icon-up-open"></i></a>  <!-- go to top -->
+	
+</body>
+</html>
