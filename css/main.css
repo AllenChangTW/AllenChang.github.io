@@ -149,7 +149,6 @@ nav a {
 	color: #333;
 }
 
-
 /* .header */
 .header {
 	position: relative;
@@ -166,6 +165,10 @@ nav a {
 	color: white;
 	font-size: 72px;
 	font-weight: normal;
+}
+
+h1.branding{
+	color: #d6b161;
 }
 
 /* todo list */
