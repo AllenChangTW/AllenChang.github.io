@@ -47,9 +47,7 @@ hr {
     padding: 0 50px;
 }
 
-.heading-title {
-	margin-bottom: 100px;
-}
+
 
 .bubble.comment {
 	position: relative;
@@ -149,26 +147,195 @@ nav a {
 	color: #333;
 }
 
+
 /* .header */
 .header {
 	position: relative;
-	padding: 200px 0;
-	background-image: url('../image/1011939_671016922914054_914263774_n.jpg');
-	background-position: 50% 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
 }
 
-.header h1 {
-    position: absolute;
-    top: 20px;
-	color: white;
-	font-size: 72px;
-	font-weight: normal;
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;  /* 動畫執行次數 */
+  animation-timing-function: linear;
+  transition: scale .2s linear;
 }
 
-h1.branding{
-	color: #d6b161;
+.circle:hover {  /* hover時放大縮小 */
+  animation-name: scale;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+.car {
+  position: absolute;
+  z-index: -10;
+  width: 80px;
+  top: 100px;
+  animation-name: drive;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.car img {
+  width: 100%;
+  height: auto;
+}
+
+
+.circle:nth-child(1) {
+  left: 5%;
+  top: 30px;
+}
+
+.circle:nth-child(2) {
+  left: 10%;
+  top: 60px;
+}
+
+.circle:nth-child(3) {
+  left: 22%;
+  top: 160px;
+}
+
+.circle:nth-child(4) {
+  left: 30%;
+  top: 30px;
+}
+
+.circle:nth-child(5) {
+  left: 42%;
+  top: 140px;
+}
+
+.circle:nth-child(6) {
+  left: 46%;
+  top: 90px;
+}
+
+.circle:nth-child(7) {
+  left: 54%;
+  top: 50px;
+}
+
+.circle:nth-child(8) {
+  left: 62%;
+  top: 120px;
+}
+
+.circle:nth-child(9) {
+  left: 73%;
+  top: 60px;
+}
+
+.circle:nth-child(10) {
+  left: 82%;
+  top: 150px;
+}
+
+
+.xs {
+  width: 10px;
+  height: 10px;
+  transform-origin: 20% center;  /* 改變圓心位置 */
+}
+
+.sm {
+  width: 30px;
+  height: 30px;
+  transform-origin: 58% center;
+}
+
+.md {
+  width: 60px;
+  height: 60px;
+  transform-origin: 45% center;
+}
+
+.lg {
+  width: 120px;
+  height: 120px;
+  transform-origin: 46% center;
+}
+
+
+.blue {
+  background-color: #37f;
+}
+
+.red {
+  background-color: #f22;
+}
+
+.green {
+  background-color: #7f3;
+}
+
+.orange {
+  background-color: #f73;
+}
+
+.yellow {
+  background-color: #fc3;
+}
+
+
+.time-xs {
+  animation-duration: 2s;  /* 動作執行秒數 */
+}
+
+.time-sm {
+  animation-duration: 4s;
+}
+
+.time-md {
+  animation-duration: 6s;
+}
+
+.time-lg {
+  animation-duration: 8s;
+}
+
+
+.reverse {  /* 100% - 0% 動畫執行順序 */
+  animation-direction: reverse;  
+}
+
+
+@keyframes rotate {  /* 360度旋轉 */
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes scale {   /* 放大倍數 */
+  25% {
+    transform: scale(1.4);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+  
+  75% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes drive { 
+  from {
+    left: -10%;
+  }
+  
+  to {
+    left: 100%;
+  }
 }
 
 /* todo list */
