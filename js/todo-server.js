@@ -8,22 +8,24 @@ $(document).ready(function(){
   // 將輸入的數值更換至複製的li
   // 加入至todo-list
   
-  // 新增  
-  $('#add-todo').click(function(e){
-    var todoItem = prompt('add todo item');
-		$.post('todo/create.php', {todo: todoItem}, function(data) {
-			// 判斷server是否有回傳 success 有的話執行新增動作
-			if(data.status=='success') {
-		    var cloneTodo = $('#todo-list li').eq(0).clone();
-		    cloneTodo.find('.content').html(data.data);
-		    cloneTodo.find('[type="text"]').val(data.data);
-		    $('#todo-list').append(cloneTodo);
-			}
+	// 新增  
+	$('#add-todo').click(function(e){
+		var todoItem = prompt('add todo item');
+		if(todoItem!=null){  //判斷是否按取消
+			$.post('todo/create.php', {todo: todoItem}, function(data) {
+				// 判斷server是否有回傳 success 有的話執行新增動作
+				if(data.status=='success') {
+					var cloneTodo = $('#todo-list li').eq(0).clone();
+					cloneTodo.find('.content').html(data.data);
+					cloneTodo.find('[type="text"]').val(data.data);
+					$('#todo-list').append(cloneTodo);
+				}
 			
-		}, 'json');
-  });
+			}, 'json');
+		}
+	});
   
-  // 修改
+	// 修改
   $('#todo-list').on('dblclick', 'li', function(e){
     $(this).addClass('editing');
     $(this).find('[type="text"]').focus();

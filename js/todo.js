@@ -8,14 +8,16 @@ $(document).ready(function(){
   // 將輸入的數值更換至複製的li
   // 加入至todo-list
   
-  // 新增  
-  $('#add-todo').click(function(e){
-    var todoItem = prompt('add todo item');
-    var cloneTodo = $('#todo-list li').eq(0).clone();
-    cloneTodo.find('.content').html(todoItem);
-    cloneTodo.find('[type="text"]').val(todoItem);
-    $('#todo-list').append(cloneTodo);
-  });
+	// 新增  
+	$('#add-todo').click(function(e){
+		var todoItem = prompt('add todo item');
+		if(todoItem!=null){  //判斷是否按取消
+			var cloneTodo = $('#todo-list li').eq(0).clone();
+			cloneTodo.find('.content').html(todoItem);
+			cloneTodo.find('[type="text"]').val(todoItem);
+			$('#todo-list').append(cloneTodo);
+		}
+	});
   
   // 修改
   $('#todo-list').on('dblclick', 'li', function(e){
