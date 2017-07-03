@@ -13,12 +13,10 @@ $(document).ready(function(){
 	});
 		
 	//點擊按鈕
-	//取消連結動作
 	//取得class scroll底下被點擊的 a
 	//得到目標位置
 	//移至目標位置
 	$('.scroll').find('a').click(function(e){
-		e.preventDefault();
 		var target = $(this).attr('href');
 		var offset = $(target).offset();
 		$('html, body').animate({scrollTop: offset.top});
